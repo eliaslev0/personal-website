@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elias Leverett</title>
+    <script type = "text/javascript" src="script.js"></script> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> 
+</head>
+
+<body onload="hideSettingsPage(); hideResumePage(); hideContactsPage(); hideFilesPage();">
+    
+    <!--
+        about page 
+        shows on startup, contains basic info
+    -->
+    <div class="about-page" onclick="bringAboutToFront()" id="about-page">
+        <div id="about-pageheader">
+            <div class="red-button-about" id="red-button-about" onclick="hideAboutPage()"></div>
+            <div class="yellow-button-about" id="yellow-button-about" onclick="hideAboutPage()"></div>
+            <div class="green-button-about" id="yellow-button-about"></div>
+
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <h1>Elias Leverett</h1> 
+                <p>Hello, my name is Elias and I'm a Computer Science Major at NMSU. </p>
+                <br>
+                <p>Click the icons in the dock at the bottom of the screen to see stuff I've worked on, my contact information, my resume, or change the color scheme of the website!</p>
+            </div>
+            
+            <div class="column">
+                <img src="images/profile_photo.png"/ class="profile_photo">
+            </div>
+        </div>
+    </div>
+
+    <!--
+        settings page
+        let's you change to light or dark theme, change background color
+    -->
+    <div class="settings-page" onclick="bringSettingsToFront()" id="settings-page">
+        <div id="settings-pageheader">
+            <div class="red-button-settings" id="red-button-settings" onclick="hideSettingsPage()"></div>
+            <div class="yellow-button-settings" id="yellow-button-settings" onclick="hideSettingsPage()"></div>
+            <div class="green-button-settings" id="yellow-button-settings"></div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <h2>Settings</h2> 
+                <p>Theme<div class="dark-theme" id="dark-theme" onclick="changeTheme('dark');"></div><div class="light-theme" id="light-theme" onclick="changeTheme('light');"></div></p><br>
+                <p>Background color<div class="red-background" id="red-background" onclick="changeBackgroundColor('brown');"></div><div class="green-background" id="green-background" onclick="changeBackgroundColor('seagreen');"></div><div class="blue-background" id="blue-background" onclick="changeBackgroundColor('steelblue');"></div></p>
+            </div>
+        </div>
+    </div>
+
+    <!--
+        resume page
+        contains a pdf of my resume
+    -->
+    <div class="resume-page" onclick="bringResumeToFront()" id="resume-page">
+        <div id="resume-pageheader">
+            <div class="red-button-resume" id="red-button-resume" onclick="hideResumePage()"></div>
+            <div class="yellow-button-resume" id="yellow-button-resume" onclick="hideResumePage()"></div>
+            <div class="green-button-resume" id="yellow-button-resume"></div>
+
+        </div>
+
+        <div class="row">
+            <object onclick="bringResumeToFront()" data="Resume.pdf" type="application/pdf" width="700" height="400">
+                alt : <a href="Resume.pdf">Resume.pdf</a>
+            </object>
+        </div>
+    </div>
+
+    <!--
+        contact page
+        contains contact information
+    -->
+    <div class="contacts-page" onclick="bringContactsToFront()" id="contacts-page">
+        <div id="contacts-pageheader">
+            <div class="red-button-contacts" id="red-button-contacts" onclick="hideContactsPage()"></div>
+            <div class="yellow-button-contacts" id="yellow-button-contacts" onclick="hideContactsPage()"></div>
+            <div class="green-button-contacts" id="yellow-button-contacts"></div>
+
+        </div>
+
+        <div class="circle-contact" id="circle-contact"><h3>E</h3></div>
+        <h2 style="text-align: center; margin-left: 0">Elias Leverett</h2>
+
+        <br><br>
+        <img src="images/phone_icon.png" style="width: 20px; transform: translate(700%, 20%); margin: auto"><p style="transform: translate(100%, 0%)">575 339-9891</p>
+        <img src="images/email_icon.png" style="width: 20px; transform: translate(900%, 20%); margin: auto"><p style="transform: translate(100%, 0%)">elias0@nmsu.edu</p>
+        
+
+    </div>
+
+    <!--
+        files page
+        contains projects and more information.
+    -->
+    <div class="files-page" onclick="bringFilesToFront()" id="files-page">
+        <div id="files-pageheader">
+            <div class="red-button-files" id="red-button-files" onclick="hideFilesPage()"></div>
+            <div class="yellow-button-files" id="yellow-button-files" onclick="hideFilesPage()"></div>
+            <div class="green-button-files" id="yellow-button-files"></div>
+
+        </div>
+
+        <header style="display: block; float: left">
+            <p style="margin-top: 3px; text-indent: 35px;">Name</p>
+        </header>
+        <hr>
+
+        <div class="line1" id="line1" style="display: block" onclick="changeLine1Color()"><a class="anchor" href="https://www.youtube.com/liomations" target="_blank">YouTube channel</a></div>
+        <div class="line2" id="line2" style="display: block" onclick="changeLine2Color()"><a class="anchor" href="https://www.github.com/eliaslev0" target="_blank">Github</a></div>
+        <div class="line1" id="line1" style="display: block" onclick="changeLine1Color()"><a class="anchor" href="projects.html">projects.txt</a></div>
+        <div class="line2" id="line2" style="display: block">   </div>
+        <div class="line1" id="line1" style="display: block">   </div>
+        <div class="line2" id="line2" style="display: block">   </div>
+        <div class="line1" id="line1" style="display: block">   </div>
+        <div class="line2" id="line2" style="display: block">   </div>
+        <div class="line1" id="line1" style="display: block">   </div>
+        <div class="line2" id="line2" style="display: block">   </div>
+        <div class="line1" id="line1" style="display: block">   </div>
+        <div class="line2" id="line2" style="display: block">   </div>
+        <div class="line1" id="line1" style="display: block">   </div>
+        <footer style="text-indent: 100px">footer note: this is not yet functional. ran out of time.</footer>
+        
+        
+    </div>
+
+    <!--
+        scripts that allow you to move the browsers around the screen. 
+        taken from: https://www.w3schools.com/howto/howto_js_draggable.asp
+        repeated for each of the 5 major screens because i ran out of time
+    -->
+    <script>
+        dragElement(document.getElementById("about-page"));
+        
+        function dragElement(elmnt) {
+          var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+          if (document.getElementById(elmnt.id + "header")) {
+            document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+          } else {
+            elmnt.onmousedown = dragMouseDown;
+          }
+        
+          function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            document.onmousemove = elementDrag;
+          }
+        
+          function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+          }
+        
+          function closeDragElement() {
+            document.onmouseup = null;
+            document.onmousemove = null;
+          }
+        }
+        </script>
+
+    <script>
+    dragElement(document.getElementById("settings-page"));
+    
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      } else {
+        elmnt.onmousedown = dragMouseDown;
+      }
+    
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+      }
+    
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+    
+      function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+        </script>
+
+    <script>
+    dragElement(document.getElementById("resume-page"));
+    
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      } else {
+        elmnt.onmousedown = dragMouseDown;
+      }
+    
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+      }
+    
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+    
+      function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+        </script>
+
+    <script>
+    dragElement(document.getElementById("contacts-page"));
+    
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      } else {
+        elmnt.onmousedown = dragMouseDown;
+      }
+    
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+      }
+    
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+    
+      function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+        </script>
+
+    <script>
+    dragElement(document.getElementById("files-page"));
+    
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      } else {
+        elmnt.onmousedown = dragMouseDown;
+      }
+    
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+      }
+    
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+    
+      function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+        </script>
+
+    <div class="dock" id="dock">
+        <img src="images/web_icon.png"/ title="Browser" class="web_icon" id="web-icon" onclick="hideAboutPage()">
+
+        <img src="images/folder_icon.png"/ title="Files" class="folder_icon" id="folder-icon" onclick="hideFilesPage()">
+        
+        <img src="images/contacts_icon.png"/ title="Contact" class="contacts_icon" id="folder-icon" onclick="hideContactsPage()">
+
+        <img src="images/resume_icon.png" title="Resume" class="resume_icon" id="resume-icon" onclick="hideResumePage()"/>
+
+        <img src="images/settings_icon.png" title="Settings" class="settings_icon" id="settings-icon" onclick="hideSettingsPage()"/>
+    </div>
+</body>
+</html>
