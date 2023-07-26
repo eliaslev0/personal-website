@@ -8,20 +8,19 @@ body {
 
 .dock {
     visibility: visible;
-    height: 60px;
-    width: 300px;
+    height: 8%;
+    width: 20%;
     background-color: rgba(255, 255, 255, 0.5);
     
-    transform: translate(150%, 900%);
+    transform: translate(190%, 1100%);
     margin: auto;
-    
+    position: absolute;
 
     border-radius: 12px;
     outline-style: solid;
     outline-color: rgba(255, 255, 255, 0.75);
     outline-width: 1px;
     box-shadow: 10px 10px 60px rgba(0, 0, 0, 0.5);
-    position: absolute;
     z-index: 20;
 }
 
@@ -494,8 +493,10 @@ p {
 
 .profile_photo {
     width: 175px;
-    margin-left: 22%;
+    display: block;
+    margin-left: 90%;
     margin-top: 10%;
+    margin-right: 10%;
 }
 
 .column {
