@@ -1,0 +1,40 @@
+td {
+    background-color: #c3d8987a;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border: 3px solid #252627;
+    border-radius: 50px;
+}
+
+table {
+    background-color: #596F62;
+    border: 3px solid #252627;
+    margin: auto;
+    border-radius: 20px;
+}
+
+body {
+    background-color: #7EA16B;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#player0span {
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+    border-radius: 5px;
+    background: rgb(48, 46, 46);
+}
+
+#player1span {
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+    border-radius: 5px;
+    background: rgb(48, 46, 46);
+}
