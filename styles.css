@@ -3,6 +3,7 @@
 */
 
 body {
+  /* background-image: url("images/river.png"); */
   background-color: brown;
 }
 
@@ -35,9 +36,13 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin: auto;
-  transform: translate(40%, 20%);
+  transform: translate(43vh, 10vh);
   box-shadow: 10px 10px 60px rgba(0, 0, 0, 0.5);
   z-index: 0;
+  resize: both;
+  @media all and (min-width: 0px) and (max-width: 720px) {
+    transform: translate(10vh, 10vh);
+  }
 }
 
 .settings-page {
@@ -47,10 +52,15 @@ body {
   width: 55%;
   border-radius: 6px;
   margin: auto;
-  transform: translate(60%, 40%);
+  transform: translate(47vh, 14vh);
   box-shadow: 10px 10px 60px rgba(0, 0, 0, 0.5);
   display: none;
   z-index: 0;
+  resize: both;
+  overflow: auto;
+  @media all and (min-width: 0px) and (max-width: 720px) {
+    transform: translate(14vh, 14vh);
+  }
 }
 
 .resume-page {
@@ -61,10 +71,15 @@ body {
   max-height: 65%;
   border-radius: 6px;
   margin: auto;
-  transform: translate(55%, 35%);
+  transform: translate(46vh, 13vh);
   box-shadow: 10px 10px 60px rgba(0, 0, 0, 0.5);
   z-index: 0;
   display: none;
+  resize: both;
+  overflow: auto;
+  @media all and (min-width: 0px) and (max-width: 720px) {
+    transform: translate(13vh, 13vh);
+  }
 }
 
 .contacts-page {
@@ -74,10 +89,16 @@ body {
   width: 55%;
   border-radius: 6px;
   margin: auto;
-  transform: translate(50%, 30%);
+  transform: translate(45vh, 12vh);
   box-shadow: 10px 10px 60px rgba(0, 0, 0, 0.5);
   z-index: 0;
   display: none;
+  text-align: center;
+  resize: both;
+  overflow: auto;
+  @media all and (min-width: 0px) and (max-width: 720px) {
+    transform: translate(12vh, 12vh);
+  }
 }
 
 .files-page {
@@ -87,10 +108,15 @@ body {
   width: 55%;
   border-radius: 6px;
   margin: auto;
-  transform: translate(45%, 25%);
+  transform: translate(44vh, 11vh);
   box-shadow: 10px 10px 60px rgba(0, 0, 0, 0.5);
   z-index: 0;
   display: none;
+  resize: both;
+  overflow: auto;
+  @media all and (min-width: 0px) and (max-width: 720px) {
+    transform: translate(11vh, 11vh);
+  }
 }
 
 #about-pageheader {
@@ -441,13 +467,6 @@ p {
   display: inline-block;
 }
 
-/* img {
-    width: 15%;
-    height: auto;
-    margin-left: 8px;
-    margin-top: 4px;
-} */
-
 .web_icon {
   width: 15%;
   margin-left: 14px;
@@ -490,6 +509,7 @@ p {
   margin-right: 100px;
   margin-left: 50%;
   object-fit: contain;
+  border: 5px solid black;
 }
 
 .column {
@@ -500,6 +520,7 @@ p {
 }
 
 .dark-theme {
+  margin-left: 30px;
   height: 20px;
   width: 20px;
   background-color: rgb(30, 39, 50);
@@ -536,6 +557,7 @@ p {
 }
 
 .red-background {
+  margin-left: 30px;
   height: 20px;
   width: 20px;
   background-color: brown;
@@ -627,6 +649,7 @@ header {
   margin-left: 50px;
   margin-right: 50px;
   text-indent: 25px;
+  overflow: hidden;
 }
 
 .line2 {
@@ -638,9 +661,107 @@ header {
   margin-left: 50px;
   margin-right: 50px;
   text-indent: 25px;
+  overflow: hidden;
 }
 
 a {
   text-decoration: none;
   color: black;
+  background: none;
+  overflow: hidden;
+  inline-size: min-content;
+}
+
+.tooltip {
+  position: relative; /* making the .tooltip span a container for the tooltip text */
+}
+
+.tooltip:before {
+  content: attr(data-text); /* here's the magic */
+  position: absolute;
+
+  top: -500%;
+
+  left: -40%;
+
+  width: 100px;
+  padding: 5px;
+  border-radius: 10px;
+  background: #00000067;
+  color: #fff;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+
+  display: none; /* hide by default */
+}
+
+.tooltip:hover:before {
+  display: block;
+}
+
+form {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+
+  justify-content: center;
+}
+
+#form-name {
+  margin-right: 8px;
+}
+
+.same-line {
+  display: flex;
+  justify-content: center;
+}
+
+::placeholder {
+  opacity: 0.3;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+
+.form-button {
+  margin-top: 8px;
+  align-items: center;
+  background-color: #bdbdbd;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  justify-content: center;
+  min-height: 2rem;
+  padding: 0px 15px 0px 15px;
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.form-button:hover,
+.form-button:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.form-button:hover {
+  transform: translateY(-1px);
+}
+
+.form-button:active {
+  background-color: #f0f0f1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
 }

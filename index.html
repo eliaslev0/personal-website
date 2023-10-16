@@ -1,65 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elias Leverett</title>
-    <script type = "text/javascript" src="script.js"></script> 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> 
-</head>
+    <script type="text/javascript" src="script.js"></script>
 
-<body onload="hideSettingsPage(); hideResumePage(); hideContactsPage(); hideFilesPage();">
-    
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    onload="hideSettingsPage(); hideResumePage(); hideContactsPage(); hideFilesPage();"
+  >
     <!--
         about page 
         shows on startup, contains basic info
     -->
     <div class="about-page" onclick="bringAboutToFront()" id="about-page">
-        <div id="about-pageheader">
-            <div class="red-button-about" id="red-button-about" onclick="hideAboutPage()"></div>
-            <div class="yellow-button-about" id="yellow-button-about" onclick="hideAboutPage()"></div>
-            <div class="green-button-about" id="yellow-button-about"></div>
+      <div id="about-pageheader">
+        <div
+          class="red-button-about"
+          id="red-button-about"
+          onclick="hideAboutPage()"
+        ></div>
+        <div
+          class="yellow-button-about"
+          id="yellow-button-about"
+          onclick="hideAboutPage()"
+        ></div>
+        <div class="green-button-about" id="yellow-button-about"></div>
+      </div>
 
+      <div class="row">
+        <div class="column">
+          <h1>Elias Leverett</h1>
+          <p>
+            Hello, my name is Elias and I'm a Computer Science Major at NMSU.
+          </p>
+          <br />
+          <p>
+            This site is meant to replicate a Mac desktop environment. Click the
+            icons in the dock at the bottom of the screen to see stuff I've
+            worked on, my contact information, my resume, or change the color
+            scheme of the website.
+          </p>
+          <br />
+          <p>
+            Each window is draggable, closeable (minimize does the same thing as
+            close at the moment), maximize feature has not been implemented.
+          </p>
         </div>
 
-        <div class="row">
-            <div class="column">
-                <h1>Elias Leverett</h1> 
-                <p>Hello, my name is Elias and I'm a Computer Science Major at NMSU. </p>
-                <br>
-                <p>This site is meant to replicate a Mac desktop environment. Click the icons in the dock at the bottom of the screen to see stuff I've worked on, my contact information, my resume, or change the color scheme of the website.</p>
-                <br>
-                <p>Each window is draggable, closeable (minimize does the same thing as close at the moment), maximize feature has not been implemented.</p>
-            </div>
-            
-            <div class="column">
-                <img src="images/profile_photo.png"/ class="profile_photo">
-            </div>
+        <div class="column">
+          <img src="images/profile_photo.png"/ class="profile_photo"
+          id="profile-photo">
         </div>
+      </div>
     </div>
 
     <!--
         settings page
         let's you change to light or dark theme, change background color
     -->
-    <div class="settings-page" onclick="bringSettingsToFront()" id="settings-page">
-        <div id="settings-pageheader">
-            <div class="red-button-settings" id="red-button-settings" onclick="hideSettingsPage()"></div>
-            <div class="yellow-button-settings" id="yellow-button-settings" onclick="hideSettingsPage()"></div>
-            <div class="green-button-settings" id="yellow-button-settings"></div>
-        </div>
+    <div
+      class="settings-page"
+      onclick="bringSettingsToFront()"
+      id="settings-page"
+    >
+      <div id="settings-pageheader">
+        <div
+          class="red-button-settings"
+          id="red-button-settings"
+          onclick="hideSettingsPage()"
+        ></div>
+        <div
+          class="yellow-button-settings"
+          id="yellow-button-settings"
+          onclick="hideSettingsPage()"
+        ></div>
+        <div class="green-button-settings" id="yellow-button-settings"></div>
+      </div>
 
-        <div class="row">
-            <div class="column">
-                <h2>Settings</h2> 
-                <p>Theme<div class="dark-theme" id="dark-theme" onclick="changeTheme('dark');"></div><div class="light-theme" id="light-theme" onclick="changeTheme('light');"></div></p><br>
-                <p>Background color<div class="red-background" id="red-background" onclick="changeBackgroundColor('brown');"></div><div class="green-background" id="green-background" onclick="changeBackgroundColor('seagreen');"></div><div class="blue-background" id="blue-background" onclick="changeBackgroundColor('steelblue');"></div></p>
-            </div>
+      <div class="row">
+        <div class="column">
+          <h2>Settings</h2>
+          <p>Theme</p>
+          <br />
+          <div
+            class="dark-theme"
+            id="dark-theme"
+            onclick="changeTheme('dark');"
+          ></div>
+          <div
+            class="light-theme"
+            id="light-theme"
+            onclick="changeTheme('light');"
+          ></div>
+          <br />
+          <p id="background-color">Background color</p>
+          <br />
+          <div
+            class="red-background"
+            id="red-background"
+            onclick="changeBackgroundColor('brown');"
+          ></div>
+          <div
+            class="green-background"
+            id="green-background"
+            onclick="changeBackgroundColor('seagreen');"
+          ></div>
+          <div
+            class="blue-background"
+            id="blue-background"
+            onclick="changeBackgroundColor('steelblue');"
+          ></div>
         </div>
+      </div>
     </div>
 
     <!--
@@ -67,38 +131,149 @@
         contains a pdf of my resume
     -->
     <div class="resume-page" onclick="bringResumeToFront()" id="resume-page">
-        <div id="resume-pageheader">
-            <div class="red-button-resume" id="red-button-resume" onclick="hideResumePage()"></div>
-            <div class="yellow-button-resume" id="yellow-button-resume" onclick="hideResumePage()"></div>
-            <div class="green-button-resume" id="yellow-button-resume"></div>
+      <div id="resume-pageheader">
+        <div
+          class="red-button-resume"
+          id="red-button-resume"
+          onclick="hideResumePage()"
+        ></div>
+        <div
+          class="yellow-button-resume"
+          id="yellow-button-resume"
+          onclick="hideResumePage()"
+        ></div>
+        <div class="green-button-resume" id="yellow-button-resume"></div>
+      </div>
 
-        </div>
+      <img
+        src="images/Resume.png"
+        alt="resume"
+        style="width: 100%; height: auto; overflow: auto"
+      />
 
-        <object onclick="bringResumeToFront()" data="Resume.pdf" type="application/pdf" width=100% height=100%>
+      <!-- <embed
+        src="Resume.pdf"
+        frameborder="0"
+        onclick="bringResumeToFront()"
+        width="100%"
+        height="100%"
+      /> -->
+
+      <!-- <object onclick="bringResumeToFront()" data="Resume.pdf" type="application/pdf" width=100% height=100%>
             alt : <a href="Resume.pdf">Resume.pdf</a>
-        </object>
+        </object> -->
     </div>
 
     <!--
         contact page
         contains contact information
     -->
-    <div class="contacts-page" onclick="bringContactsToFront()" id="contacts-page">
-        <div id="contacts-pageheader">
-            <div class="red-button-contacts" id="red-button-contacts" onclick="hideContactsPage()"></div>
-            <div class="yellow-button-contacts" id="yellow-button-contacts" onclick="hideContactsPage()"></div>
-            <div class="green-button-contacts" id="yellow-button-contacts"></div>
+    <div
+      class="contacts-page"
+      onclick="bringContactsToFront()"
+      id="contacts-page"
+    >
+      <div id="contacts-pageheader">
+        <div
+          class="red-button-contacts"
+          id="red-button-contacts"
+          onclick="hideContactsPage()"
+        ></div>
+        <div
+          class="yellow-button-contacts"
+          id="yellow-button-contacts"
+          onclick="hideContactsPage()"
+        ></div>
+        <div class="green-button-contacts" id="yellow-button-contacts"></div>
+      </div>
 
+      <div class="circle-contact" id="circle-contact"><h3>E</h3></div>
+      <h2 style="text-align: center; margin-left: 0; margin-bottom: -15px">
+        Elias Leverett
+      </h2>
+
+      <br />
+
+      <p style="margin-left: -10px; margin-right: 20px">
+        <img
+          src="images/phone_icon.png"
+          style="width: 20px; transform: translate(-0.5vh, 0.5vh); margin-left: 3vh;"
+        />(575) 339-9891
+      </p>
+      <p style="margin-left: -10px; margin-right: 20px">
+        <img
+          src="images/email_icon.png"
+          style="width: 20px; transform: translate(-0.5vh, 0.5vh)"
+        />elias0@nmsu.edu
+      </p>
+
+      <div>
+        <div>
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            id="form"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="7fbbf4ec-4fba-47e2-91dc-06695a94b5b1"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="New Submission from Web3Forms"
+            />
+            <input
+              type="checkbox"
+              name="botcheck"
+              id=""
+              style="display: none"
+            />
+            <div class="same-line">
+              <div>
+                <label for="name" class="labels">Name</label><br />
+                <input
+                  type="text"
+                  name="name"
+                  id="form-name"
+                  placeholder="John Doe"
+                  style="width: 150px"
+                  required
+                />
+              </div>
+              <div>
+                <label for="email" class="labels">Email</label><br />
+                <input
+                  type="email"
+                  name="email"
+                  id="form-email"
+                  style="width: 150px"
+                  placeholder="example@domain.com"
+                  required
+                />
+              </div>
+            </div>
+            <br />
+            <div>
+              <label for="message" class="labels">Message</label><br />
+
+              <textarea
+                rows="5"
+                name="message"
+                id="form-message"
+                style="width: 316px;""
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+            <div>
+              <button type="submit" class="form-button">Send Message</button>
+            </div>
+            <p id="result"></p>
+          </form>
         </div>
-
-        <div class="circle-contact" id="circle-contact"><h3>E</h3></div>
-        <h2 style="text-align: center; margin-left: 0">Elias Leverett</h2>
-
-        <br><br>
-        <img src="images/phone_icon.png" style="width: 20px; transform: translate(700%, 20%); margin: auto"><p style="transform: translate(100%, 0%)">575 339-9891</p>
-        <img src="images/email_icon.png" style="width: 20px; transform: translate(900%, 20%); margin: auto"><p style="transform: translate(100%, 0%)">elias0@nmsu.edu</p>
-        
-
+      </div>
     </div>
 
     <!--
@@ -106,33 +281,135 @@
         contains projects and more information.
     -->
     <div class="files-page" onclick="bringFilesToFront()" id="files-page">
-        <div id="files-pageheader">
-            <div class="red-button-files" id="red-button-files" onclick="hideFilesPage()"></div>
-            <div class="yellow-button-files" id="yellow-button-files" onclick="hideFilesPage()"></div>
-            <div class="green-button-files" id="yellow-button-files"></div>
+      <div id="files-pageheader">
+        <div
+          class="red-button-files"
+          id="red-button-files"
+          onclick="hideFilesPage()"
+        ></div>
+        <div
+          class="yellow-button-files"
+          id="yellow-button-files"
+          onclick="hideFilesPage()"
+        ></div>
+        <div class="green-button-files" id="yellow-button-files"></div>
+      </div>
 
-        </div>
+      <p style="margin-top: 8px; text-indent: 35px; font-weight: bold">
+        Projects
+      </p>
+      <hr color="#eeeeee" width="89%" id="hr-thing" />
 
-        <header style="display: block; float: left">
-            <p style="margin-top: 3px; text-indent: 35px;">Projects</p>
-        </header>
-        <hr color="#eeeeee" width="89%">
-
-        <div class="line1" id="line1" style="display: block" onclick="changeLine1Color()"><a class="anchor" target="_blank" href="projects/connect4/index.html">Multiplayer Connect 4 Game</a></div>
-        <div class="line2" id="line2" style="display: block" onclick="changeLine2Color()"><a class="anchor" target="_blank" href="projects/to-do-list-app/public/signup.html">Full-stack To-Do List App</a></div>
-        <div class="line1" id="line1" style="display: block" onclick="changeLine1Color()"><a class="anchor" target="_blank" href="projects/cave-ascent/caveascent.html">Cave Ascent Platformer Game</a></div>
-        <div class="line2" id="line2" style="display: block" onclick="changeLine2Color()"><a class="anchor" target="_blank" href="https://github.com/Novaii-Yoder/Car-Horror-Game">Car Horror Game</a></div>
-        <div class="line1" id="line1" style="display: block" onclick="changeLine1Color()"><a class="anchor" target="_blank" href="projects/rock-climbing-website/index.html">Basic Rock Climbing Website</a></div>
-        <div class="line2" id="line2" style="display: block">   </div>
-        <div class="line1" id="line1" style="display: block">   </div>
-        <div class="line2" id="line2" style="display: block">   </div>
-        <div class="line1" id="line1" style="display: block">   </div>
-        <div class="line2" id="line2" style="display: block">   </div>
-        <div class="line1" id="line1" style="display: block">   </div>
-        <div class="line2" id="line2" style="display: block">   </div>
-        <div class="line1" id="line1" style="display: block">   </div>
-        
-        
+      <div
+        class="line1"
+        id="line1"
+        style="display: block"
+        onclick="changeLineColor(1)"
+      >
+        <a class="anchor" target="_blank" href="projects/connect4/index.html"
+          >Multiplayer Connect 4 Game</a
+        >
+      </div>
+      <div
+        class="line2"
+        id="line2"
+        style="display: block"
+        onclick="changeLineColor(2)"
+      >
+        <a
+          class="anchor"
+          target="_blank"
+          href="projects/to-do-list-app/public/signup.html"
+          >Full-stack To-Do List App</a
+        >
+      </div>
+      <div
+        class="line1"
+        id="line3"
+        style="display: block"
+        onclick="changeLineColor(3)"
+      >
+        <a
+          class="anchor"
+          target="_blank"
+          href="projects/cave-ascent/caveascent.html"
+          >Cave Ascent Platformer Game</a
+        >
+      </div>
+      <div
+        class="line2"
+        id="line4"
+        style="display: block"
+        onclick="changeLineColor(4)"
+      >
+        <a
+          class="anchor"
+          target="_blank"
+          href="https://github.com/Novaii-Yoder/Car-Horror-Game"
+          >Car Horror Game</a
+        >
+      </div>
+      <div
+        class="line1"
+        id="line5"
+        style="display: block"
+        onclick="changeLineColor(5)"
+      >
+        <a
+          class="anchor"
+          target="_blank"
+          href="projects/rock-climbing-website/index.html"
+          >Basic Rock Climbing Website</a
+        >
+      </div>
+      <div
+        class="line2"
+        id="line6"
+        style="display: block"
+        onclick="changeLineColor(6)"
+      ></div>
+      <div
+        class="line1"
+        id="line7"
+        style="display: block"
+        onclick="changeLineColor(7)"
+      ></div>
+      <div
+        class="line2"
+        id="line8"
+        style="display: block"
+        onclick="changeLineColor(8)"
+      ></div>
+      <div
+        class="line1"
+        id="line9"
+        style="display: block"
+        onclick="changeLineColor(9)"
+      ></div>
+      <div
+        class="line2"
+        id="line10"
+        style="display: block"
+        onclick="changeLineColor(10)"
+      ></div>
+      <div
+        class="line1"
+        id="line11"
+        style="display: block"
+        onclick="changeLineColor(11)"
+      ></div>
+      <div
+        class="line2"
+        id="line12"
+        style="display: block"
+        onclick="changeLineColor(12)"
+      ></div>
+      <div
+        class="line1"
+        id="line13"
+        style="display: block"
+        onclick="changeLineColor(13)"
+      ></div>
     </div>
 
     <!--
@@ -141,205 +418,250 @@
         repeated for each of the 5 major screens because i ran out of time
     -->
     <script>
-        dragElement(document.getElementById("about-page"));
-        
-        function dragElement(elmnt) {
-          var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-          if (document.getElementById(elmnt.id + "header")) {
-            document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-          } else {
-            elmnt.onmousedown = dragMouseDown;
-          }
-        
-          function dragMouseDown(e) {
-            e = e || window.event;
-            e.preventDefault();
-            pos3 = e.clientX;
-            pos4 = e.clientY;
-            document.onmouseup = closeDragElement;
-            document.onmousemove = elementDrag;
-          }
-        
-          function elementDrag(e) {
-            e = e || window.event;
-            e.preventDefault();
-            pos1 = pos3 - e.clientX;
-            pos2 = pos4 - e.clientY;
-            pos3 = e.clientX;
-            pos4 = e.clientY;
-            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-          }
-        
-          function closeDragElement() {
-            document.onmouseup = null;
-            document.onmousemove = null;
-          }
+      dragElement(document.getElementById("about-page"));
+
+      function dragElement(elmnt) {
+        var pos1 = 0,
+          pos2 = 0,
+          pos3 = 0,
+          pos4 = 0;
+        if (document.getElementById(elmnt.id + "header")) {
+          document.getElementById(elmnt.id + "header").onmousedown =
+            dragMouseDown;
+        } else {
+          elmnt.onmousedown = dragMouseDown;
         }
-        </script>
+
+        function dragMouseDown(e) {
+          e = e || window.event;
+          e.preventDefault();
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          document.onmouseup = closeDragElement;
+          document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+          e = e || window.event;
+          e.preventDefault();
+          pos1 = pos3 - e.clientX;
+          pos2 = pos4 - e.clientY;
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+          elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+        }
+
+        function closeDragElement() {
+          document.onmouseup = null;
+          document.onmousemove = null;
+        }
+      }
+    </script>
 
     <script>
-    dragElement(document.getElementById("settings-page"));
-    
-    function dragElement(elmnt) {
-      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-      if (document.getElementById(elmnt.id + "header")) {
-        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-      } else {
-        elmnt.onmousedown = dragMouseDown;
+      dragElement(document.getElementById("settings-page"));
+
+      function dragElement(elmnt) {
+        var pos1 = 0,
+          pos2 = 0,
+          pos3 = 0,
+          pos4 = 0;
+        if (document.getElementById(elmnt.id + "header")) {
+          document.getElementById(elmnt.id + "header").onmousedown =
+            dragMouseDown;
+        } else {
+          elmnt.onmousedown = dragMouseDown;
+        }
+
+        function dragMouseDown(e) {
+          e = e || window.event;
+          e.preventDefault();
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          document.onmouseup = closeDragElement;
+          document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+          e = e || window.event;
+          e.preventDefault();
+          pos1 = pos3 - e.clientX;
+          pos2 = pos4 - e.clientY;
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+          elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+        }
+
+        function closeDragElement() {
+          document.onmouseup = null;
+          document.onmousemove = null;
+        }
       }
-    
-      function dragMouseDown(e) {
-        e = e || window.event;
-        e.preventDefault();
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        document.onmousemove = elementDrag;
-      }
-    
-      function elementDrag(e) {
-        e = e || window.event;
-        e.preventDefault();
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-      }
-    
-      function closeDragElement() {
-        document.onmouseup = null;
-        document.onmousemove = null;
-      }
-    }
-        </script>
+    </script>
 
     <script>
-    dragElement(document.getElementById("resume-page"));
-    
-    function dragElement(elmnt) {
-      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-      if (document.getElementById(elmnt.id + "header")) {
-        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-      } else {
-        elmnt.onmousedown = dragMouseDown;
+      dragElement(document.getElementById("resume-page"));
+
+      function dragElement(elmnt) {
+        var pos1 = 0,
+          pos2 = 0,
+          pos3 = 0,
+          pos4 = 0;
+        if (document.getElementById(elmnt.id + "header")) {
+          document.getElementById(elmnt.id + "header").onmousedown =
+            dragMouseDown;
+        } else {
+          elmnt.onmousedown = dragMouseDown;
+        }
+
+        function dragMouseDown(e) {
+          e = e || window.event;
+          e.preventDefault();
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          document.onmouseup = closeDragElement;
+          document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+          e = e || window.event;
+          e.preventDefault();
+          pos1 = pos3 - e.clientX;
+          pos2 = pos4 - e.clientY;
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+          elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+        }
+
+        function closeDragElement() {
+          document.onmouseup = null;
+          document.onmousemove = null;
+        }
       }
-    
-      function dragMouseDown(e) {
-        e = e || window.event;
-        e.preventDefault();
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        document.onmousemove = elementDrag;
-      }
-    
-      function elementDrag(e) {
-        e = e || window.event;
-        e.preventDefault();
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-      }
-    
-      function closeDragElement() {
-        document.onmouseup = null;
-        document.onmousemove = null;
-      }
-    }
-        </script>
+    </script>
 
     <script>
-    dragElement(document.getElementById("contacts-page"));
-    
-    function dragElement(elmnt) {
-      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-      if (document.getElementById(elmnt.id + "header")) {
-        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-      } else {
-        elmnt.onmousedown = dragMouseDown;
+      dragElement(document.getElementById("contacts-page"));
+
+      function dragElement(elmnt) {
+        var pos1 = 0,
+          pos2 = 0,
+          pos3 = 0,
+          pos4 = 0;
+        if (document.getElementById(elmnt.id + "header")) {
+          document.getElementById(elmnt.id + "header").onmousedown =
+            dragMouseDown;
+        } else {
+          elmnt.onmousedown = dragMouseDown;
+        }
+
+        function dragMouseDown(e) {
+          e = e || window.event;
+          e.preventDefault();
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          document.onmouseup = closeDragElement;
+          document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+          e = e || window.event;
+          e.preventDefault();
+          pos1 = pos3 - e.clientX;
+          pos2 = pos4 - e.clientY;
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+          elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+        }
+
+        function closeDragElement() {
+          document.onmouseup = null;
+          document.onmousemove = null;
+        }
       }
-    
-      function dragMouseDown(e) {
-        e = e || window.event;
-        e.preventDefault();
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        document.onmousemove = elementDrag;
-      }
-    
-      function elementDrag(e) {
-        e = e || window.event;
-        e.preventDefault();
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-      }
-    
-      function closeDragElement() {
-        document.onmouseup = null;
-        document.onmousemove = null;
-      }
-    }
-        </script>
+    </script>
 
     <script>
-    dragElement(document.getElementById("files-page"));
-    
-    function dragElement(elmnt) {
-      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-      if (document.getElementById(elmnt.id + "header")) {
-        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-      } else {
-        elmnt.onmousedown = dragMouseDown;
+      dragElement(document.getElementById("files-page"));
+
+      function dragElement(elmnt) {
+        var pos1 = 0,
+          pos2 = 0,
+          pos3 = 0,
+          pos4 = 0;
+        if (document.getElementById(elmnt.id + "header")) {
+          document.getElementById(elmnt.id + "header").onmousedown =
+            dragMouseDown;
+        } else {
+          elmnt.onmousedown = dragMouseDown;
+        }
+
+        function dragMouseDown(e) {
+          e = e || window.event;
+          e.preventDefault();
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          document.onmouseup = closeDragElement;
+          document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+          e = e || window.event;
+          e.preventDefault();
+          pos1 = pos3 - e.clientX;
+          pos2 = pos4 - e.clientY;
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+          elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+        }
+
+        function closeDragElement() {
+          document.onmouseup = null;
+          document.onmousemove = null;
+        }
       }
-    
-      function dragMouseDown(e) {
-        e = e || window.event;
-        e.preventDefault();
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        document.onmousemove = elementDrag;
-      }
-    
-      function elementDrag(e) {
-        e = e || window.event;
-        e.preventDefault();
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-      }
-    
-      function closeDragElement() {
-        document.onmouseup = null;
-        document.onmousemove = null;
-      }
-    }
-        </script>
+    </script>
 
     <div class="dock" id="dock">
-        <img src="images/web_icon.png"/ title="Browser" class="web_icon" id="web-icon" onclick="hideAboutPage()">
+      <span class="tooltip" style="display: inline" data-text="About">
+        <img src="images/web_icon.png"/ title="Browser" class="web_icon"
+        id="web-icon" onclick="hideAboutPage()">
+      </span>
 
-        <img src="images/folder_icon.png"/ title="Files" class="folder_icon" id="folder-icon" onclick="hideFilesPage()">
-        
-        <img src="images/contacts_icon.png"/ title="Contact" class="contacts_icon" id="folder-icon" onclick="hideContactsPage()">
+      <span class="tooltip" style="display: inline" data-text="Projects">
+        <img src="images/folder_icon.png"/ title="Files" class="folder_icon"
+        id="folder-icon" onclick="hideFilesPage()">
+      </span>
 
-        <img src="images/resume_icon.png" title="Resume" class="resume_icon" id="resume-icon" onclick="hideResumePage()"/>
+      <span class="tooltip" style="display: inline" data-text="Contact">
+        <img src="images/contacts_icon.png"/ title="Contact"
+        class="contacts_icon" id="folder-icon" onclick="hideContactsPage()">
+      </span>
 
-        <img src="images/settings_icon.png" title="Settings" class="settings_icon" id="settings-icon" onclick="hideSettingsPage()"/>
+      <span class="tooltip" style="display: inline" data-text="Resume">
+        <img
+          src="images/resume_icon.png"
+          title="Resume"
+          class="resume_icon"
+          id="resume-icon"
+          onclick="hideResumePage()"
+        />
+      </span>
+
+      <span class="tooltip" style="display: inline" data-text="Settings">
+        <img
+          src="images/settings_icon.png"
+          title="Settings"
+          class="settings_icon"
+          id="settings-icon"
+          onclick="hideSettingsPage()"
+        />
+      </span>
     </div>
-</body>
+  </body>
 </html>
