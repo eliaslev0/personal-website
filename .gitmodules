@@ -7,5 +7,5 @@
   url = git://elias-leverett.com/projects/rock-climbing-website
 
 [submodule "to-do-list-app"] 
-  path = projects/projects/to-do-list-app
+  path = projects/to-do-list-app
   url = git://elias-leverett.com/projects/projects/to-do-list-app
