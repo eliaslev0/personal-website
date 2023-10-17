@@ -1,0 +1,11 @@
+[submodule "projects/cave-ascent"] 
+  path = projects/cave-ascent
+  url = git://projects/cave-ascent
+
+[submodule "projects/rock-climbing-website"] 
+  path = projects/rock-climbing-website
+  url = git://projects/rock-climbing-website
+
+[submodule "projects/to-do-list-app"] 
+  path = projects/projects/to-do-list-app
+  url = git://projects/projects/to-do-list-app
