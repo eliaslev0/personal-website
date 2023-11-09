@@ -1,11 +1,11 @@
-[submodule "cave-ascent"] 
-  path = projects/cave-ascent
-  url = git://elias-leverett.com/projects/cave-ascent
+# [submodule "cave-ascent"] 
+#   path = projects/cave-ascent
+#   url = git://elias-leverett.com/projects/cave-ascent
 
-[submodule "rock-climbing-website"] 
-  path = projects/rock-climbing-website
-  url = git://elias-leverett.com/projects/rock-climbing-website
+# [submodule "rock-climbing-website"] 
+#   path = projects/rock-climbing-website
+#   url = git://elias-leverett.com/projects/rock-climbing-website
 
-[submodule "to-do-list-app"] 
-  path = projects/to-do-list-app
-  url = git://elias-leverett.com/projects/projects/to-do-list-app
+# [submodule "to-do-list-app"] 
+#   path = projects/to-do-list-app
+#   url = git://elias-leverett.com/projects/projects/to-do-list-app
