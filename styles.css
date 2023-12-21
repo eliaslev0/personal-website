@@ -506,8 +506,8 @@ p {
   width: 225px;
   display: block;
   margin-top: 10%;
-  margin-right: 100px;
-  margin-left: 50%;
+  margin-right: 50px;
+  margin-left: 100px;
   object-fit: contain;
   border: 5px solid black;
 }
